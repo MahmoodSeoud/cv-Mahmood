@@ -1,0 +1,141 @@
+% This template is designed to offer an aesthetically pleasing resume that adheres to a formal and institutional tone, making it suitable for applications to companies and research centers requiring a high degree of professionalism. Navy blue has been chosen as the primary color to align with these objectives.
+%----------------------------------------------------------------------------------------
+%  Packages And Other Document Configurations
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+% Document margins
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+
+% Color and hyperlink packages
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% Footnote and margin adjustment packages
+\usepackage{footnote}
+\usepackage{changepage}
+
+% Fontawesome package for icons
+\usepackage{fontawesome}
+
+% Tabularx package for custom tables
+\usepackage{tabularx}
+% Define navyblue color
+\definecolor{navyblue}{RGB}{0,54,123}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=navyblue,
+    filecolor=magenta,      
+    urlcolor=navyblue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+
+%----------------------------------------------------------------------------------------
+%   Customizations
+%----------------------------------------------------------------------------------------
+
+% Define italicitem, bolditem, and plainitem commands
+\newcommand{\italicitem}[1]{\item{\textit{#1}}}
+\newcommand{\bolditem}[1]{\item{\textbf{#1}}}
+\newcommand{\plainitem}[1]{\item{#1}}
+
+% Define user-friendly link command for hyperlinks
+\newcommand{\link}[2]{{\href{#1}{#2}}}
+
+\newcommand{\entry}[2]{#1 & #2 \tabularnewline}
+
+%----------------------------------------------------------------------------------------
+%   Define envsection command for defining a new environment section
+%----------------------------------------------------------------------------------------
+\newcommand{\tableEnv}[2]{%
+  \begin{rSection}{#1}
+    \begin{adjustwidth}{0.0in}{0.1in}
+      \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{6ex}} X @{}}
+        #2
+      \end{tabularx}
+    \end{adjustwidth}
+  \end{rSection}
+}
+
+%----------------------------------------------------------------------------------------
+%   Begin document
+%----------------------------------------------------------------------------------------
+
+% Set name with navyblue color
+\name{\color{navyblue} Mahmood Seoud}
+
+\begin{document}
+
+\printPersonalInfo{
+  \personalInfo{\tag{E-mail}\info{mahmoodseoud@gmail.com} \infoSeparator\tag{Telephone number}\info{+4531603874}}
+}
+
+%----------------------------------------------------------------------------------------
+%   Profile
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Professional Summary}
+\begin{rSubsectionNoBullet}{\bf Computer Science Student - ML/AI Focus}{}{Profile}{}
+ \item{Computer Science Master's student with strong interests in machine learning and AI applications. Proven track record delivering scalable solutions with measurable cost savings (4,000-5,000 DKK/month).}
+ \end{rSubsectionNoBullet}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   Education section
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+    %  Summer course - FIXED: Moved date to 4th parameter, location to 2nd
+    \begin{rSubsectionNoBullet}{\bf Elite Summer School - Robotics \& Entrepreneurship}{August 2025}{Intensive Program}{University of Southern Denmark}
+            \item{Collaborative industrial robots, AI algorithms, mobile robot manipulators}
+    \end{rSubsectionNoBullet}
+
+    % Masters's degree entry
+    \begin{rSubsectionNoBullet}{\bf Master's in Computer Science}{July 2024 - June 2026}{3\textsuperscript{rd} semester}{IT University of Copenhagen}
+            \item{Focus: Digital fabrication, rapid prototyping, advanced AI/ML applications}
+    \end{rSubsectionNoBullet}
+
+    % Bachelor's degree entry
+    \begin{rSubsectionNoBullet}{\bf Bachelor's in Computer Science}{July 2021 - June 2024}{Thesis: Mesh Grid Networks}{University of Copenhagen}
+        \item{Strong emphasis on algorithms, mathematics, and problem-solving}
+    \end{rSubsectionNoBullet}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%   Work experience section
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Professional Experience}
+    \begin{rSubsection}{PeopleNet A/S}{August 2022 - Present}{Software Developer}{Copenhagen, Denmark}
+\item \textbf{Built AI-powered system} for SharePoint Online using Azure Cognitive Services and OpenAI API, saving the company 4,000-5,000 DKK monthly
+\item \textbf{Migrated from Azure to OpenAI API} to reduce costs while maintaining functionality
+\item \textbf{Created React/TypeScript applications} that streamline project setup, cutting configuration time by 40\%
+    \end{rSubsection}
+\end{rSection}
+
+\begin{rSection}{Technical Projects}
+    \begin{rSubsection}{DISCOSAT / DISCO Project}{January 2025 – Present}{Embedded Systems Developer (Volunteer)}{Copenhagen, Denmark}
+        \item \textbf{Built C-based camera controller and custom Yocto Linux OS} for CubeSats, reducing boot time by 35\% with CSP integration for real-time telemetry
+    \end{rSubsection}
+
+    % Date first, then location
+    \begin{rSubsection}{LEGO Scratch Detection System}{August 2025}{Computer Vision Developer}{Odense, Denmark}
+        \item \textbf{Built automated scratch detection system} for LEGO quality control using OpenCV and machine learning
+        \item \textbf{Worked with 3-person team} to solve real industry problem, delivering working prototype in hackathon setting
+    \end{rSubsection}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% Technical skills section
+%----------------------------------------------------------------------------------------
+
+\tableEnv{Technical Skills}{
+    \entry{Languages:}{C, C++, Python, TypeScript, JavaScript, Java}
+    \entry{Frameworks:}{React, TensorFlow, OpenCV, Azure Functions, Node.js}
+    \entry{Systems:}{Linux, Yocto, Docker, Azure Cloud, Git, SQL}
+    \entry{Specialized:}{Embedded Systems, Computer Vision, Machine Learning, Robotics}
+}
+
+\end{document}
