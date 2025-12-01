@@ -1,135 +1,183 @@
-% This template is designed to offer an aesthetically pleasing resume that adheres to a formal and institutional tone, making it suitable for applications to companies and research centers requiring a high degree of professionalism. Navy blue has been chosen as the primary color to align with these objectives.
-%----------------------------------------------------------------------------------------
-%  Packages And Other Document Configurations
-%----------------------------------------------------------------------------------------
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-\documentclass{resume} % Use the custom resume.cls style
+\documentclass[letterpaper,11pt]{article}
 
-% Document margins
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
 
-% Color and hyperlink packages
-\usepackage{xcolor}
-\usepackage{hyperref}
 
-% Footnote and margin adjustment packages
-\usepackage{footnote}
-\usepackage{changepage}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% Fontawesome package for icons
-\usepackage{fontawesome}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-% Tabularx package for custom tables
-\usepackage{tabularx}
-% Define navyblue color
-\definecolor{navyblue}{RGB}{0,54,123}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=navyblue,
-    filecolor=magenta,      
-    urlcolor=navyblue,
-    pdftitle={Overleaf Example},
-    pdfpagemode=FullScreen,
-    }
 \urlstyle{same}
 
-%----------------------------------------------------------------------------------------
-%   Customizations
-%----------------------------------------------------------------------------------------
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
 
-% Define italicitem, bolditem, and plainitem commands
-\newcommand{\italicitem}[1]{\item{\textit{#1}}}
-\newcommand{\bolditem}[1]{\item{\textbf{#1}}}
-\newcommand{\plainitem}[1]{\item{#1}}
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Define user-friendly link command for hyperlinks
-\newcommand{\link}[2]{{\href{#1}{#2}}}
-
-\newcommand{\entry}[2]{#1 & #2 \tabularnewline}
-
-%----------------------------------------------------------------------------------------
-%   Define envsection command for defining a new environment section
-%----------------------------------------------------------------------------------------
-\newcommand{\tableEnv}[2]{%
-  \begin{rSection}{#1}
-    \begin{adjustwidth}{0.0in}{0.1in}
-      \begin{tabularx}{\linewidth}{@{} >{\bfseries}l @{\hspace{6ex}} X @{}}
-        #2
-      \end{tabularx}
-    \end{adjustwidth}
-  \end{rSection}
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
 }
 
-%----------------------------------------------------------------------------------------
-%   Begin document
-%----------------------------------------------------------------------------------------
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
 
-% Set name with navyblue color
-\name{\color{navyblue} Mahmood Seoud}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-\printPersonalInfo{
-  \personalInfo{\tag{E-mail}\info{mahmoodseoud@gmail.com} \infoSeparator\tag{Telephone number}\info{+4531603874}}
-}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://mahmoodseoud.github.io/mahmoodseoud.me/}{\Large Mahmood Seoud}} & Email : \href{mailto:mahmoodseoud@gmail.com}{mahmoodseoud@gmail.com}\\
+  \href{https://github.com/MahmoodSeoud}{github.com/MahmoodSeoud} & Mobile : +45 31 60 38 74 \\
+\end{tabular*}
 
-%----------------------------------------------------------------------------------------
-%   Profile
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Professional Summary}
-\begin{rSubsectionNoBullet}{\bf Embedded Systems Engineering Student}{}{Profile}{}
- \item{Computer Science Master's student specializing in embedded Linux systems and low-level C/C++ development. Hands-on experience building custom Yocto distributions and real-time communication protocols for resource-constrained environments. Seeking to contribute to Linux-based embedded audio platforms.}
- \end{rSubsectionNoBullet}
-\end{rSection}
 
-%----------------------------------------------------------------------------------------
-%   Education section
-%----------------------------------------------------------------------------------------
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {IT University of Copenhagen}{Copenhagen, Denmark}
+      {Master of Science in Computer Science}{July 2024 -- June 2026}
+    \resumeSubheading
+      {University of Copenhagen}{Copenhagen, Denmark}
+      {Bachelor of Science in Computer Science}{July 2021 -- June 2024}
+    \resumeSubheading
+      {University of Southern Denmark}{Denmark}
+      {Elite Summer School - Robotics \& Entrepreneurship (3-week intensive)}{Aug. 2025}
+  \resumeSubHeadingListEnd
 
-\begin{rSection}{Education}
-    %  Summer course - FIXED: Moved date to 4th parameter, location to 2nd
-    \begin{rSubsectionNoBullet}{\bf Elite Summer School - Robotics \& Entrepreneurship}{August 2025}{Intensive Program}{University of Southern Denmark}
-            \item{Collaborative industrial robots, AI algorithms, mobile robot manipulators}
-    \end{rSubsectionNoBullet}
 
-    % Masters's degree entry
-    \begin{rSubsectionNoBullet}{\bf Master's in Computer Science}{July 2024 - June 2026}{3\textsuperscript{rd} semester}{IT University of Copenhagen}
-            \item{Focus: Digital fabrication, rapid prototyping, advanced AI/ML applications}
-    \end{rSubsectionNoBullet}
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
 
-    % Bachelor's degree entry
-    \begin{rSubsectionNoBullet}{\bf Bachelor's in Computer Science}{July 2021 - June 2024}{Thesis: Mesh Grid Networks}{University of Copenhagen}
-        \item{Strong emphasis on algorithms, mathematics, and problem-solving}
-    \end{rSubsectionNoBullet}
-\end{rSection}
+    \resumeSubheading
+      {DISCO-2 CubeSat Project}{Copenhagen, Denmark}
+      {Embedded Systems Developer}{Jan 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{Heterogeneous SoC Architecture}
+          {Developed software for Cortex-A53/Cortex-M7 heterogeneous system; A53 runs Linux for image processing while M7 handles low-power operations during system suspend.}
+        \resumeItem{Yocto BSP Development}
+          {Built custom embedded Linux distribution using Yocto/OpenEmbedded for 3U CubeSat; configured kernel, device trees, and minimal rootfs for resource-constrained space environment.}
+        \resumeItem{Camera Pipeline}
+          {Implemented camera control application interfacing with onboard cameras via CSI; developed configurable image processing pipeline (DIPP) with multiple processing stages for in-orbit image analysis.}
+        \resumeItem{CSP Communication}
+          {Integrated CubeSat Space Protocol (CSP) stack for telemetry and image downlink to ground station; implemented packet fragmentation and error recovery for reliable transmission.}
+        \resumeItem{Cross-Platform Debugging}
+          {Debugged image pipeline issues using GDB remote debugging on target hardware; traced memory and timing issues across A53/M7 boundary.}
+      \resumeItemListEnd
 
-%----------------------------------------------------------------------------------------
-%   Work experience section
-%----------------------------------------------------------------------------------------
+    \resumeSubheading
+      {PeopleNet A/S}{Copenhagen, Denmark}
+      {Software Developer (Part-time)}{Aug 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{Enterprise Development}
+          {Built SharePoint Framework (SPFx) solutions with Microsoft Graph API and PnP JS; developed Azure Functions for backend processing and automation.}
+      \resumeItemListEnd
 
-\begin{rSection}{Professional Experience}
-    \begin{rSubsection}{PeopleNet A/S}{August 2022 - Present}{Software Developer (Part-time)}{Copenhagen, Denmark}
-\item \textbf{Developed enterprise applications} for SharePoint solutions, demonstrating professional software development practices and collaborative teamwork
-\item \textbf{Integrated new features into existing codebases} using Git workflows, maintaining code quality and consistency across multi-developer projects
-    \end{rSubsection}
-\end{rSection}
+  \resumeSubHeadingListEnd
 
-\begin{rSection}{Technical Projects}
-    \begin{rSubsection}{DISCOSAT CubeSat Satellite Platform}{January 2025 – Present}{Embedded Systems Developer (Volunteer)}{Copenhagen, Denmark}
-        \item \textbf{Built custom embedded Linux distribution using Yocto/OpenEmbedded} with stripped kernel and minimal rootfs, reducing boot time by 35\% through init system optimization and kernel configuration tuning for ARM architecture
-        \item \textbf{Implemented CubeSat Space Protocol (CSP) in C} for real-time telemetry transmission to ground station, including packet routing and error handling in resource-constrained environment
-    \end{rSubsection}
-\end{rSection}
 
-%----------------------------------------------------------------------------------------
-% Technical skills section
-%----------------------------------------------------------------------------------------
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{LEGO Quality Control System (Collaboration with LEGO)}
+      {Computer vision system for automated scratch detection using AnomalyDINO. Developed during Elite Robotics Summer School working with collaborative industrial robots.}
+    \resumeSubItem{Mesh Grid Networks (BSc Thesis)}
+      {Distributed mesh networking protocol implementation; analyzed routing algorithms and packet delivery in decentralized communication systems.}
+  \resumeSubHeadingListEnd
 
-\tableEnv{Technical Skills}{
-    \entry{Languages:}{C, C++ (C++11/14), Python, Java}
-    \entry{Embedded Systems:}{Yocto/OpenEmbedded, Linux kernel configuration, cross-compilation toolchains, ARM architecture, real-time systems}
-    \entry{Development Tools:}{Git, GCC/G++, Make, CMake, Docker, CI/CD pipelines}
-    \entry{Protocols \& Libraries:}{CubeSat Space Protocol (CSP), OpenCV, TCP/IP networking}
-}
 
+%-----------PUBLICATIONS-----------------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubItem{COPA2024, San Diego}
+      {``Building Towards a Distributed, Dynamic Solution to the Santa Claus Problem'' - Co-authored with David Marchant. Concurrent distributed systems with performance analysis.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C, C++, Python, Bash}
+   }
+   \item{
+     \textbf{Embedded Platforms}{: ARM Cortex-A53, ARM Cortex-M7, Yocto/OpenEmbedded, Linux kernel, device trees}
+   }
+   \item{
+     \textbf{Protocols \& Interfaces}{: CSP (CubeSat Space Protocol), CSI/MIPI, SPI, I2C, UART, TCP/IP}
+   }
+   \item{
+     \textbf{Tools}{: GCC cross-compilation, GDB remote debugging, Make/CMake, Git, Docker}
+   }
+ \resumeSubHeadingListEnd
+
+
+%--------LANGUAGES------------
+\section{Languages}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Danish}{: Native} \hfill
+     \textbf{English}{: Fluent} \hfill
+     \textbf{Arabic}{: Fluent}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
 \end{document}
