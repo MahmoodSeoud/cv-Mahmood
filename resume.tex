@@ -92,6 +92,9 @@
     \resumeSubheading
       {IT University of Copenhagen}{Copenhagen, Denmark}
       {Master of Science in Computer Science}{July 2024 -- June 2026}
+      \resumeItemListStart
+        \resumeItemPlain{Relevant coursework: Algorithms, Distributed Systems, Software Engineering, Databases}
+      \resumeItemListEnd
     \resumeSubheading
       {University of Copenhagen}{Copenhagen, Denmark}
       {Bachelor of Science in Computer Science}{July 2021 -- June 2024}
@@ -109,24 +112,28 @@
       {DISCO-2 CubeSat Project}{Copenhagen, Denmark}
       {Embedded Systems Developer}{Jan 2025 - Present}
       \resumeItemListStart
-        \resumeItem{Heterogeneous SoC Architecture}
-          {Developed software for Cortex-A53/Cortex-M7 heterogeneous system; A53 runs Linux for image processing while M7 handles low-power operations during system suspend.}
-        \resumeItem{Yocto BSP Development}
-          {Built custom embedded Linux distribution using Yocto/OpenEmbedded for 3U CubeSat; configured kernel, device trees, and minimal rootfs for resource-constrained space environment.}
-        \resumeItem{Camera Pipeline}
-          {Implemented camera control application interfacing with onboard cameras via CSI; developed configurable image processing pipeline (DIPP) with multiple processing stages for in-orbit image analysis.}
-        \resumeItem{CSP Communication}
-          {Integrated CubeSat Space Protocol (CSP) stack for telemetry and image downlink to ground station; implemented packet fragmentation and error recovery for reliable transmission.}
-        \resumeItem{Cross-Platform Debugging}
-          {Debugged image pipeline issues using GDB remote debugging on target hardware; traced memory and timing issues across A53/M7 boundary.}
+        \resumeItem{Multi-Component Architecture}
+          {Developed software for heterogeneous Cortex-A53/M7 system with clean interfaces between Linux application layer and low-power microcontroller.}
+        \resumeItem{Custom Platform Development}
+          {Built custom Linux distribution using Yocto/OpenEmbedded; configured kernel, device trees, and optimized rootfs.}
+        \resumeItem{Image Processing Pipeline}
+          {Implemented configurable multi-stage image processing pipeline with camera control interface for in-orbit analysis.}
+        \resumeItem{Communication \& Debugging}
+          {Integrated protocol stack with packet fragmentation and error recovery; diagnosed cross-component issues using remote debugging.}
       \resumeItemListEnd
 
     \resumeSubheading
       {PeopleNet A/S}{Copenhagen, Denmark}
       {Software Developer (Part-time)}{Aug 2022 - Present}
       \resumeItemListStart
+        \resumeItem{Teams Provisioning System}
+          {Built full-stack solution with SPFx React frontend and Azure Functions backend; automated Microsoft Teams creation via Graph API with configurable business rules.}
+        \resumeItem{SharePoint Site Automation}
+          {Developed self-service project site provisioning with custom permission handling, bypassing default SharePoint inheritance for client-specific access control requirements.}
+        \resumeItem{Dynamics 365 CRM Integration}
+          {Automated newsletter signup pipeline feeding directly into Dynamics 365, enabling sales team to quickly identify and contact potential leads.}
         \resumeItem{Enterprise Development}
-          {Built SharePoint Framework (SPFx) solutions with Microsoft Graph API and PnP JS; developed Azure Functions for backend processing and automation.}
+          {Delivered SPFx solutions with TypeScript/React frontends integrated with Azure Functions, Microsoft Graph API, and Azure SQL backends.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -135,8 +142,8 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{LEGO Quality Control System (Collaboration with LEGO)}
-      {Computer vision system for automated scratch detection using AnomalyDINO. Developed during Elite Robotics Summer School working with collaborative industrial robots.}
+    \resumeSubItem{LEGO Quality Control System}
+      {Computer vision system for automated scratch detection using AnomalyDINO; developed in collaboration with LEGO working with collaborative industrial robots.}
     \resumeSubItem{Mesh Grid Networks (BSc Thesis)}
       {Distributed mesh networking protocol implementation; analyzed routing algorithms and packet delivery in decentralized communication systems.}
   \resumeSubHeadingListEnd
@@ -154,27 +161,22 @@
 \section{Technical Skills}
  \resumeSubHeadingListStart
    \item{
-     \textbf{Languages}{: C, C++, Python, Bash}
+     \textbf{Languages}{: C\#, TypeScript, JavaScript, Python, C, C++, SQL}
    }
    \item{
-     \textbf{Embedded Platforms}{: ARM Cortex-A53, ARM Cortex-M7, Yocto/OpenEmbedded, Linux kernel, device trees}
+     \textbf{Cloud \& Backend}{: Azure Functions, Azure SQL, Microsoft Graph API, .NET, REST APIs}
    }
    \item{
-     \textbf{Protocols \& Interfaces}{: CSP (CubeSat Space Protocol), CSI/MIPI, SPI, I2C, UART, TCP/IP}
+     \textbf{Frontend}{: React, SharePoint Framework (SPFx)}
    }
    \item{
-     \textbf{Tools}{: GCC cross-compilation, GDB remote debugging, Make/CMake, Git, Docker}
+     \textbf{Tools}{: Git, Docker, VS Code, Azure DevOps, Make/CMake}
    }
- \resumeSubHeadingListEnd
-
-
-%--------LANGUAGES------------
-\section{Languages}
- \resumeSubHeadingListStart
    \item{
-     \textbf{Danish}{: Native} \hfill
-     \textbf{English}{: Fluent} \hfill
-     \textbf{Arabic}{: Fluent}
+     \textbf{Systems}{: Linux, Embedded (ARM Cortex), Yocto/OpenEmbedded}
+   }
+   \item{
+     \textbf{Languages}{: Danish (Native), English (Fluent), Arabic (Fluent)}
    }
  \resumeSubHeadingListEnd
 
