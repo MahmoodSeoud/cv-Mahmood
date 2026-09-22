@@ -1,0 +1,182 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://mahmoodseoud.github.io/mahmoodseoud.me/}{\Large Mahmood Seoud}} & Email : \href{mailto:mahmoodseoud@gmail.com}{mahmoodseoud@gmail.com}\\
+  \href{https://github.com/MahmoodSeoud}{github.com/MahmoodSeoud} & Mobile : +45 31 60 38 74 \\
+\end{tabular*}
+
+\vspace{4pt}
+\small{Software engineer with hands-on experience building backend systems, SQL-based services, and cloud infrastructure in Azure. Comfortable working in C\#, Python, and SQL across the full lifecycle from development to production. Focused on writing reliable, maintainable code and taking ownership of what I ship.}
+\vspace{-8pt}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {IT University of Copenhagen}{Copenhagen, Denmark}
+      {Master of Science in Computer Science}{July 2024 -- June 2026}
+      \resumeItemListStart
+        \resumeItemPlain{Coursework: Databases, Distributed Systems, Data-Intensive Systems, Algorithms, Software Engineering}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of Copenhagen}{Copenhagen, Denmark}
+      {Bachelor of Science in Computer Science}{July 2021 -- June 2024}
+    \resumeSubheading
+      {University of Southern Denmark}{Denmark}
+      {Elite Summer School - Robotics \& Entrepreneurship (3-week intensive)}{Aug. 2025}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {DISCO-2 CubeSat Project}{Copenhagen, Denmark}
+      {Software Engineer}{Jan 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{Backend Services}
+          {Built Python-based backend services that collect and process telemetry from distributed embedded systems, with validation and error handling throughout.}
+        \resumeItem{System Reliability}
+          {Designed scheduled processing jobs with monitoring and alerting to catch issues early; focused on keeping systems running smoothly in production.}
+        \resumeItem{CI/CD \& Deployment}
+          {Set up version-controlled deployment pipelines with automated testing, managed build artifacts and dependency versioning across environments.}
+        \resumeItem{Cross-Team Collaboration}
+          {Worked closely with science teams to turn requirements into working software; documented system architecture and data flows.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {PeopleNet A/S}{Copenhagen, Denmark}
+      {Software Developer (Part-time)}{Aug 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{Backend Development}
+          {Built and maintained C\#, Python and SQL-based backend services integrating multiple systems; handled data consistency and synchronization across services.}
+        \resumeItem{Azure \& Cloud Infrastructure}
+          {Ran production workloads on Azure; set up CI/CD pipelines in Azure DevOps for automated testing and deployment.}
+        \resumeItem{Production Ownership}
+          {Owned monitoring and health checks for production services; managed containerized workloads with Docker and handled incident troubleshooting.}
+        \resumeItem{Stakeholder Communication}
+          {Translated business needs into technical solutions; worked with non-technical stakeholders to scope features and deliver on time.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubItem{COPA2024, San Diego}
+      {``Building Towards a Distributed, Dynamic Solution to the Santa Claus Problem'' - Co-authored with David Marchant. Research on concurrent distributed systems.}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{LEGO Quality Control System}
+      {End-to-end backend system with configurable processing stages for industrial sensor data. Built modular data transformation, validation, and aggregation in Python with a focus on reliability and correctness.}
+    \resumeSubItem{SatDeploy - Deployment CLI}
+      {Python CLI tool for automated deployments with SQLite-based tracking. Supports versioned releases, rollback, and operational history logging. Built with Click for extensible command architecture.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C\#, Python, SQL, Bash \hfill \textbf{Spoken}: Danish (Native), English (Fluent), Arabic}
+   }
+   \item{
+     \textbf{Backend \& Systems}{: REST APIs, backend services, data modeling, production monitoring, observability}
+   }
+   \item{
+     \textbf{Cloud \& Infrastructure}{: Azure (DevOps, cloud services), Docker, CI/CD pipelines, GitHub Actions}
+   }
+   \item{
+     \textbf{Tools \& Practices}{: Git, agile workflows, automated testing, troubleshooting, system documentation}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

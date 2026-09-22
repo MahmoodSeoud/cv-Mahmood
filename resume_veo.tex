@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://mahmoodseoud.github.io/mahmoodseoud.me/}{\Large Mahmood Seoud}} & Email : \href{mailto:mahmoodseoud@gmail.com}{mahmoodseoud@gmail.com}\\
+  \href{https://github.com/MahmoodSeoud}{github.com/MahmoodSeoud} & Mobile : +45 31 60 38 74 \\
+\end{tabular*}
+
+\vspace{4pt}
+\small{Data and ML engineer with experience building end-to-end machine learning pipelines, backend services, and data infrastructure in Python and SQL on Azure. Currently completing an MSc thesis on predicting football corner kick outcomes using graph neural networks and player tracking data. Strong interest in sports analytics and applying ML to real-world sensor and video data.}
+\vspace{-8pt}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {IT University of Copenhagen}{Copenhagen, Denmark}
+      {Master of Science in Computer Science}{July 2024 -- June 2026}
+      \resumeItemListStart
+        \resumeItemPlain{Thesis: Predicting corner kick outcomes in football using GNNs and player tracking data}
+        \resumeItemPlain{Coursework: Databases, Distributed Systems, Data-Intensive Systems, Algorithms, Software Engineering}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of Copenhagen}{Copenhagen, Denmark}
+      {Bachelor of Science in Computer Science}{July 2021 -- June 2024}
+    \resumeSubheading
+      {University of Southern Denmark}{Denmark}
+      {Elite Summer School - Robotics \& Entrepreneurship (3-week intensive)}{Aug. 2025}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {DISCO-2 CubeSat Project}{Copenhagen, Denmark}
+      {Data \& Platform Engineer}{Jan 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{Data Pipeline Development}
+          {Built Python-based pipelines collecting and processing telemetry from distributed embedded systems; handled noisy, real-time sensor data with validation and error handling.}
+        \resumeItem{System Reliability}
+          {Designed scheduled processing jobs with monitoring and alerting; focused on keeping data systems running reliably in production.}
+        \resumeItem{CI/CD \& Deployment}
+          {Set up version-controlled deployment pipelines with automated testing; managed build artifacts and dependency versioning.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {PeopleNet A/S}{Copenhagen, Denmark}
+      {Data Engineer / Software Developer (Part-time)}{Aug 2022 - Present}
+      \resumeItemListStart
+        \resumeItem{Data Integration \& Backend}
+          {Built Python, C\# and SQL-based backend services and ETL workflows integrating multiple data sources; ensured consistency across systems.}
+        \resumeItem{Azure Cloud Platform}
+          {Ran production workloads on Azure; set up CI/CD pipelines in Azure DevOps for automated testing and deployment.}
+        \resumeItem{Production Monitoring}
+          {Owned data validation, health checks, and monitoring for production pipelines; managed containerized services with Docker.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS-----------------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubItem{COPA2024, San Diego}
+      {``Building Towards a Distributed, Dynamic Solution to the Santa Claus Problem'' - Co-authored with David Marchant. Research on concurrent distributed systems.}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Corner Kick Prediction with GNNs (MSc Thesis)}
+      {Two-stage graph neural network pipeline predicting corner kick outcomes from SkillCorner tracking data. Built graph construction from raw player coordinates, trained with LOMO cross-validation, ran ablation studies and permutation tests. Key finding: tracking-based velocity features outperform freeze-frame data for shot prediction.}
+    \resumeSubItem{LEGO Quality Control Pipeline}
+      {End-to-end modular data pipeline with configurable processing stages for industrial sensor data. Built data transformation, validation, and aggregation workflows in Python.}
+    \resumeSubItem{SatDeploy - Deployment CLI}
+      {Python CLI tool for automated deployments with SQLite-based tracking. Supports versioned releases, rollback, and operational history logging.}
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: Python, SQL, C\#, Bash \hfill \textbf{Spoken}: Danish (Native), English (Fluent), Arabic}
+   }
+   \item{
+     \textbf{ML \& Data}{: Graph neural networks, data pipelines, ETL, data modeling, cross-validation, statistical testing}
+   }
+   \item{
+     \textbf{Cloud \& Infrastructure}{: Azure (DevOps, cloud services), Docker, CI/CD pipelines, GitHub Actions}
+   }
+   \item{
+     \textbf{Tools \& Practices}{: Git, agile workflows, REST APIs, automated testing, production monitoring}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
